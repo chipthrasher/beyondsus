@@ -13,18 +13,20 @@
             justify-content: center;
             align-items: center;
         }
-        
-        .container {
-
-        }
 
         #desc {
             width: 20vw;
         }
-
+        
         marquee {
             font-size: 50px;
             font-family: "Comic Sans MS", "Papyrus", monospace;
+        }
+        
+        #special {
+            font-weight: bold;
+            opacity: 0.1;
+            font-size: 30px;
         }
 
         img {
@@ -50,13 +52,45 @@
 <body>
     <div id="container">
         <marquee scrollamount="10">Among Us: Beyond Sus</marquee>
-        <div id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia fuga quam consequuntur fugiat deleniti, reprehenderit magnam cum repellat, cumque numquam debitis. Fugit dolores cum, est mollitia odit nobis asperiores.</div>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <div id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia fuga quam
+            consequuntur fugiat deleniti, reprehenderit magnam cum repellat, cumque numquam debitis. Fugit dolores cum,
+            est mollitia odit nobis asperiores.</div>
+        <a id="aaaa" href="#">
             <img id="img" src="coots.jpg">
         </a>
+        <marquee id="special" scrollamount="10">Website Design by <span style="color:white">Poo Studios</span>. Movie Design by WamartO.</marquee>
     </div>
     <script>
+        // Get the anchor element
+        var randomLink = document.getElementById('aaaa');
 
+        // Function to determine the URL based on probability
+        function determineURL() {
+            // Generate a random number between 0 and 99
+            var randomNumber = Math.floor(Math.random() * 100);
+
+            // If the random number is less than 90 (90% chance)
+            if (randomNumber < 90) {
+                return 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Well-known Rick Astley song
+            } else {
+                return 'https://www.youtube.com/watch?v=o5EhkBXBqHs'; // Slightly more niche Rick Astley song
+            }
+        }
+
+        // Function to handle click event
+        function handleClick(event) {
+            // Prevent the default behavior of the anchor element
+            event.preventDefault();
+
+            // Determine the URL
+            var url = determineURL();
+
+            // Redirect the user to the determined URL
+            window.location.href = url;
+        }
+
+        // Attach event listener to the anchor element
+        randomLink.addEventListener('click', handleClick);
     </script>
 </body>
 
