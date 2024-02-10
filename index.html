@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Among Us: Beyond Sus</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        Among Us: Beyond Sus
-    </body>
+
+<head>
+    <title>Among Us: Beyond Sus</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+
+        }
+
+        #desc {
+            width: 20vw;
+        }
+
+        marquee {
+            font-size: 50px;
+            font-family: "Comic Sans MS", "Papyrus", monospace;
+        }
+
+        img {
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+            100% {
+                transform: rotate(-5deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <marquee scrollamount="10">Among Us: Beyond Sus</marquee>
+        <div id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia fuga quam consequuntur fugiat deleniti, reprehenderit magnam cum repellat, cumque numquam debitis. Fugit dolores cum, est mollitia odit nobis asperiores.</div>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <img id="img" src="coots.jpg">
+        </a>
+    </div>
+    <script>
+
+    </script>
+</body>
+
 </html>
